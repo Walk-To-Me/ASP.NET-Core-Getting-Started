@@ -1,0 +1,22 @@
+﻿@model IEnumerable<IBook>
+@{
+    ViewBag.Title = "书籍列表页";
+}
+
+<div class="card-deck">
+    @foreach (var book in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@book.BookName</h3>
+            </div>
+            <img class="card-img-top" src="~/images/logo.png" />
+
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="details" asp-route-Id="@book.Id" class ="btn btn-primary">查看</a>
+                <a href="#" class="btn btn-primary">编辑</a>
+                <a href="#" class="btn btn-primary">删除</a>
+            </div>
+        </div>
+    }
+</div>

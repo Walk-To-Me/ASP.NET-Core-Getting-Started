@@ -1,0 +1,29 @@
+﻿@model HomeDetailsViewModel
+@{
+    ViewBag.Title = Model.PageTitle;
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card-header">
+            <h1>@Model.IBook.BookName</h1>
+        </div>
+
+        <div class="card-body text-center">
+            <img class="card-img-top" src="" />
+
+            <h4>ID：@Model.IBook.Id</h4>
+            <h4>作者：@Model.IBook.AuthorName</h4>
+            <h4>价格：@Model.IBook.Value</h4>
+        </div>
+
+        <div class="card-footer text-center">
+            <a asp-controller="home" asp-action="index" class="btn btn-primary">返回</a>
+            <a href="#" class="btn btn-primary">编辑</a>
+            <a href="#" class="btn btn-danger">删除</a>
+        </div>
+
+    </div>
+</div>
+
+
